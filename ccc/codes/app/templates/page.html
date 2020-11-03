@@ -1,0 +1,36 @@
+{%extends "layout.html"%}
+{% block content %}
+<br>
+	<a href="/">
+		<button type="button" class="btn btn-dark">Back</button>
+	</a>
+</br>
+<center>
+    <div class="body">
+    	<div class="container">
+    		<input class="form-control mb-4" id="tableSearch" type="text" placeholder="Type something to search list items">
+      <table class="table table-bordered table">
+        <thead class="thead-dark" align="center">
+          <tr>
+            <th scope="col">College</th>
+            <th scope="col">Department</th>
+            <th scope="col">Course</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <tr>
+            {% for row in page %}
+            <td>{{ row[3] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[1] }}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+      </table>
+    </div>
+	</div>
+  </div>
+</center>
+
+
+{% endblock %}
